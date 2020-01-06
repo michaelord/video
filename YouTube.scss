@@ -1,0 +1,35 @@
+.youtube {
+	> div {
+		transition: all 0.5s;
+
+		height: 0;
+		padding-bottom: 56%;
+		position: relative;
+		background: #000;
+
+		div {
+			width: 100%;
+			height: 100%;
+			background: #000;
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			height: 100%;
+		}
+	}
+
+	&[data-intersecting='false'] {
+		> div {
+			div {
+				position: fixed;
+				bottom: var(--space-md);
+				left: var(--space-md);
+				z-index: 40;
+				width: 300px;
+				height: 200px;
+				top: auto;
+			}
+		}
+	}
+}
